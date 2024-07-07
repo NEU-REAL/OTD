@@ -39,7 +39,9 @@ Clone the repository and catkin_make:
 ```
 ### 3.2 For your own bag file
 Your bag file needs to contain the LiDAR point cloud topic (sensor_msgs/PointCloud2) and the odometry topic (nav_msgs/Odometry). The point cloud is in the local coordinate frame, while the odometry is the transformation from the local frame to the global frame.
-**Special note: my method requires ground segmentation, and the ground segmentation method we use requires that the height of the LiDAR from the ground is fixed. Therefore, for handheld or airborne devices, our method will not work.**
+
+**Special note: OTD requires ground segmentation, and the ground segmentation method we use requires that the height of the LiDAR from the ground is fixed. Therefore, for handheld or airborne devices, our method will not work.**
+
 1. Modify the lid_topic, odom_topic, and sensor_height(**The height of the origin of the local coordinate frame from the ground**) parameters in the online.yaml file under the config folder.
 2. Run
 ```
