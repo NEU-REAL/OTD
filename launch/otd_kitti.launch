@@ -1,0 +1,14 @@
+<launch>
+  <!-- Launch file for velodyne16 VLP-16 LiDAR -->
+
+    <arg name="rviz" default="false" />
+
+    <rosparam command="load" file="$(find otd)/config/kitti_00.yaml" />
+
+    <node pkg="otd" type="run_otd_KITTI" name="otd_KITTI" output="screen" /> 
+
+    <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find otd)/rviz_cfg/kitti.rviz" />
+    </group>
+
+</launch>

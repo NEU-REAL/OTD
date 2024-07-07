@@ -1,0 +1,23 @@
+dataset:
+  dataset_path: /home/youzhu/dataset/SemanticKITTI/05
+  start_frame: 2350
+  end_frame: 2670                          #-1代表所有帧
+  dynamic_label: [252, 253, 254, 255, 256, 257, 258, 259]
+  extrinsic_T: [ -1.198459927713e-02, -5.403984729748e-02, -2.921968648686e-01 ]
+  extrinsic_R: [ 4.276802385584e-04, -9.999672484946e-01, -8.084491683471e-03,
+                              -7.210626507497e-03, 8.081198471645e-03, -9.999413164504e-01, 
+                              9.999738645903e-01, 4.859485810390e-04, -7.206933692422e-03 ]
+  retification_R: [1, 0, 0,
+                                  0, 0, -1,
+                                  0, -1, 0]
+
+groundseparate:
+  sensor_height: 1.73                                # 用于计算开始时的最低高度
+  tau_seeds: 0.6
+  tau_dis: 0.14
+
+otd:
+  tau_ratio: 0.8
+  voxel_size: 0.5
+
+

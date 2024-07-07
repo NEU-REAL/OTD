@@ -1,0 +1,16 @@
+<launch>
+  <!-- Launch file for velodyne16 VLP-16 LiDAR -->
+
+    <arg name="rviz" default="true" />
+
+    <rosparam command="load" file="$(find otd)/config/online.yaml" />
+
+    <param name="save_path" type="string" value="$(find otd)/result"/>
+
+    <node pkg="otd" type="run_otd_online" name="run_otd_online" output="screen" /> 
+
+    <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find otd)/rviz_cfg/rslidar.rviz" />
+    </group>
+
+</launch>
