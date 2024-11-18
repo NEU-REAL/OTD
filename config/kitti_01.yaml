@@ -18,4 +18,4 @@ groundseparate:
 
 otd:
   tau_ratio: 0.8
-  voxel_size: 1.5
+  voxel_size: 2
